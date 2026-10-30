@@ -2,29 +2,10 @@
 
 A dark theme for [oh-my-pi](https://github.com/can1357/oh-my-pi) (`omp`) and Pi: ink-black surfaces with a muted teal accent. It uses the same palette as the [Sumi Omarchy theme](https://github.com/suvikyi/omarchy-sumi-theme).
 
-## Install
+## Install for oh-my-pi
 
-### As a package (recommended)
-
-```bash
-omp install github:suvikyi/omp-sumi-theme
-```
-
-For base Pi:
-
-```bash
-pi install git:github.com/suvikyi/omp-sumi-theme
-```
-
-Then pick `sumi` with `/theme` (or `/settings`), or set it directly:
-
-```bash
-omp config set theme.dark sumi
-```
-
-Sumi is dark-only. If you also want it in the light slot, set `theme.light` to `sumi` as well.
-
-### As a single file
+oh-my-pi only discovers themes in `~/.omp/agent/themes`; themes inside installed
+plugins are not scanned, so install the file directly:
 
 ```bash
 mkdir -p ~/.omp/agent/themes
@@ -32,7 +13,30 @@ curl -fsSL https://raw.githubusercontent.com/suvikyi/omp-sumi-theme/main/themes/
   -o ~/.omp/agent/themes/sumi.json
 ```
 
-For base Pi, use `~/.pi/agent/themes/sumi.json` instead.
+Then pick `sumi` in `/settings` → Appearance → Dark Theme, or set it directly:
+
+```bash
+omp config set theme.dark sumi
+```
+
+Sumi is dark-only. If you also want it in the light slot, set `theme.light` to
+`sumi` as well.
+
+For development, symlink the file instead of copying it:
+
+```bash
+ln -sf "$PWD/themes/sumi.json" ~/.omp/agent/themes/sumi.json
+```
+
+## Install for base Pi
+
+Pi packages do support themes, so the repo can be installed as a package:
+
+```bash
+pi install git:github.com/suvikyi/omp-sumi-theme
+```
+
+Alternatively, copy `themes/sumi.json` to `~/.pi/agent/themes/sumi.json`.
 
 ## Terminal background
 
