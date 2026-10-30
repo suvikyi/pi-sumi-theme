@@ -1,0 +1,29 @@
+{
+  "name": "omp-sumi-theme",
+  "version": "0.1.0",
+  "description": "Sumi — a dark theme for oh-my-pi (omp) and Pi, matching the Omarchy Sumi theme.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suvikyi/omp-sumi-theme.git"
+  },
+  "keywords": [
+    "pi-package",
+    "pi-theme",
+    "oh-my-pi",
+    "omp",
+    "omp-theme",
+    "sumi",
+    "dark-theme",
+    "terminal-theme",
+    "tui-theme"
+  ],
+  "files": [
+    "themes/",
+    "README.md"
+  ],
+  "pi": {
+    "themes": [
+      "./themes"
+    ]
+  }
+}
